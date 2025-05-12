@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>My Bookings</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Room</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for booking in bookings %}
+      <tr>
+        <td>{{ booking.room.name }}</td>
+        <td>{{ booking.start_time|date:"M d, Y" }}</td>
+        <td>{{ booking.start_time|time }} - {{ booking.end_time|time }}</td>
+        <td>
+          <span class="badge badge-{{ booking.status|yesno:'success,secondary,danger' }}">
+            {{ booking.get_status_display }}
+          </span>
+        </td>
+        <td>
+          <a href="{% url 'bookings:cancel' booking.id %}" 
+             class="btn btn-sm btn-danger"
+             onclick="return confirm('Are you sure?')">Cancel</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

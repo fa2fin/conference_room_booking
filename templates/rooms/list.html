@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Доступные переговорные</h2>
+
+    {% if user.is_staff %}
+    <a href="{% url 'rooms:create' %}" class="btn btn-primary mb-4">
+        Создать новую комнату
+    </a>
+    {% endif %}
+
+    <div class="row">
+        {% for room in rooms %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ room.name }}</h5>
+                    <p class="card-text">
+                        Вместимость: {{ room.capacity }} чел.<br>
+                        Проектор: {% if room.has_projector %}✅{% else %}❌{% endif %}<br>
+                        {{ room.description|default:"" }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

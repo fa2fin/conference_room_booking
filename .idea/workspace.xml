@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b42b1cf8-77d7-42f3-bdf2-711efe97880d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/conference_room_booking.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conference_room_booking/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conference_room_booking/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conference_room_booking/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conference_room_booking/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rooms/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bookings/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bookings/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rooms/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rooms/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rooms/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2wzKCF3Eudlx5CTEtRvci6IKnX7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b42b1cf8-77d7-42f3-bdf2-711efe97880d" name="Changes" comment="" />
+      <created>1747038832648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747038832648</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

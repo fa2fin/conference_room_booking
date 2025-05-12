@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <h2>{{ room.name }} Details</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Specifications</h5>
+          <p class="card-text">
+            {{ room.description }}<br>
+            Capacity: {{ room.capacity }}<br>
+            Projector: {% if room.has_projector %}Yes{% else %}No{% endif %}<br>
+            Whiteboard: {% if room.has_whiteboard %}Yes{% else %}No{% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Book This Room</h5>
+          <form method="POST" action="{% url 'bookings:create' room.id %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-success">Submit Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
