@@ -1,33 +1,44 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags %}  <!-- Загрузка тегов crispy -->
 
 {% block content %}
 <div class="container">
-  <h2>{{ room.name }} Details</h2>
+  <h2>{{ room.name }}</h2>
   <div class="row">
+    <!-- Детали комнаты -->
     <div class="col-md-6">
-      <div class="card">
+      <div class="card mb-4">
         <div class="card-body">
-          <h5 class="card-title">Specifications</h5>
-          <p class="card-text">
-            {{ room.description }}<br>
-            Capacity: {{ room.capacity }}<br>
-            Projector: {% if room.has_projector %}Yes{% else %}No{% endif %}<br>
-            Whiteboard: {% if room.has_whiteboard %}Yes{% else %}No{% endif %}
-          </p>
+          <h5>Описание</h5>
+          <p>{{ room.description }}</p>
+          <ul>
+            <li>Вместимость: {{ room.capacity }} человек</li>
+            <li>Проектор: {% if room.has_projector %}Да{% else %}Нет{% endif %}</li>
+          </ul>
         </div>
       </div>
     </div>
-    
+
+    <!-- Форма бронирования -->
     <div class="col-md-6">
       <div class="card">
+        <div class="card-header">Забронировать</div>
         <div class="card-body">
-          <h5 class="card-title">Book This Room</h5>
-          <form method="POST" action="{% url 'bookings:create' room.id %}">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit" class="btn btn-success">Submit Booking</button>
-          </form>
+          {% if room.is_active %}
+            {% if user.is_authenticated %}
+              <form method="POST" action="{% url 'bookings:create' room.id %}">
+                {% csrf_token %}
+                {{ form|crispy }}  <!-- crispy-форма будет работать только после загрузки тегов -->
+                <button type="submit" class="btn btn-primary mt-3">Подтвердить</button>
+              </form>
+            {% else %}
+              <div class="alert alert-info">
+                Для бронирования <a href="{% url 'login' %}">войдите</a> в систему.
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="alert alert-warning">Комната временно недоступна.</div>
+          {% endif %}
         </div>
       </div>
     </div>

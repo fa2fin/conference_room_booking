@@ -3,7 +3,7 @@ from .models import Room
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    # Кастомизация админ-панели для залов
+
     list_display = ('name', 'capacity', 'has_projector', 'is_active')
     list_filter = ('is_active', 'has_projector')
     search_fields = ('name', 'description')

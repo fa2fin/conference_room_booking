@@ -1,10 +1,10 @@
 from django.urls import path
 from . import views
 
-app_name = 'rooms'  # Уникальное пространство имён
+app_name = 'rooms'
 
 urlpatterns = [
     path('', views.room_list, name='list'),
-    path('create/', views.room_create, name='create'),  # Добавьте эту строку
     path('<int:pk>/', views.room_detail, name='detail'),
+    path('create/', views.room_create, name='create'),
 ]

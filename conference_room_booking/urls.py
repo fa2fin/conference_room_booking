@@ -1,4 +1,3 @@
-# Главные URL-маршруты
 from django.contrib import admin
 from django.urls import path, include
 # conference_room_booking/urls.py
@@ -6,7 +5,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
-    path('rooms/', include('rooms.urls')),
+    path('rooms/', include('rooms.urls', namespace='rooms')),
     path('bookings/', include('bookings.urls')),
     path('', include('rooms.urls')),
 ]

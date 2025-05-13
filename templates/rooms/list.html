@@ -6,9 +6,7 @@
     <h2 class="my-4">Доступные переговорные</h2>
 
     {% if user.is_staff %}
-    <a href="{% url 'rooms:create' %}" class="btn btn-primary mb-4">
-        Создать новую комнату
-    </a>
+        <a href="{% url 'rooms:create' %}" class="btn btn-primary mb-4">Создать новую комнату</a>
     {% endif %}
 
     <div class="row">
@@ -19,9 +17,12 @@
                     <h5 class="card-title">{{ room.name }}</h5>
                     <p class="card-text">
                         Вместимость: {{ room.capacity }} чел.<br>
-                        Проектор: {% if room.has_projector %}✅{% else %}❌{% endif %}<br>
-                        {{ room.description|default:"" }}
+                        Проектор: {% if room.has_projector %}✅{% else %}❌{% endif %}
                     </p>
+                    <!-- Кнопка бронирования -->
+                    <a href="{% url 'rooms:detail' room.id %}" class="btn btn-success w-100">
+                        Забронировать
+                    </a>
                 </div>
             </div>
         </div>

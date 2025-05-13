@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# Скрипт для управления Django
 import os
 import sys
 

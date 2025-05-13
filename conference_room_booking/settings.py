@@ -1,5 +1,3 @@
-# Основные настройки Django
-import os
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -8,10 +6,9 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')  # Секретный ключ из переменных окружения
-DEBUG = True  # Режим разработки
+DEBUG = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-# Разрешенные хосты
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Установленные приложения
@@ -29,7 +26,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
 ]
 
-# Middleware
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -40,7 +37,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Настройки базы данных (пример для PostgreSQL)
+# Настройки базы данных PostgreSQL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

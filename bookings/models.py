@@ -18,9 +18,9 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def is_conflict(self):
-        # Проверка на пересечение бронирований
         return Booking.objects.filter(
             room=self.room,
             start_time__lt=self.end_time,
-            end_time__gt=self.start_time
+            end_time__gt=self.start_time,
+            room__is_active=True  # Только активные комнаты
         ).exclude(pk=self.pk).exists()
