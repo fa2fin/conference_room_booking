@@ -34,15 +34,23 @@ def create_booking(request, room_id):
     return render(request, 'bookings/create.html', {'form': form, 'room': room})
 
 def booking_list(request):
-    bookings = Booking.objects.filter(user=request.user)
+    bookings = Booking.objects.filter(user=request.user).order_by('-start_time')
     return render(request, 'bookings/list.html', {'bookings': bookings})
 
 def booking_detail(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
     return render(request, 'bookings/detail.html', {'booking': booking})
 
+
+@login_required
 def cancel_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
-    if request.user == booking.user:
-        booking.delete()
+
+    # Проверка: пользователь может отменить только свои бронирования
+    if request.user != booking.user and not request.user.is_staff:
+        messages.error(request, "У вас нет прав для отмены этого бронирования.")
+        return redirect('bookings:list')
+
+    booking.delete()
+    messages.success(request, "Бронирование успешно отменено.")
     return redirect('bookings:list')
